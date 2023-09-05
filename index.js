@@ -13,11 +13,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
+app.use(router);
 
 app.set('port', process.env.PORT || 5000);
 app.set('base_url', process.env.BASE_URL + ':' + app.get('port'));
 
-app.use(router);
 
 app.listen(app.get('port'), () => {
         console.log(`Listening on ${process.env.BASE_URL
