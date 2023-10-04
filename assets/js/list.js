@@ -3,7 +3,7 @@ import { closeModals } from "./utils.js";
 import { listenToClickOnAddCardButton, addCardToList } from "./card.js";
 import { getLists, createList, updateList, deleteList, updateCard } from "./api.js";
 import { addLabelToTemplateLabelModal } from "./label.js";
-import Sortable from "sortablejs";
+import Sortable from 'sortablejs';
 
 // --------------------------------------
 // Event Listening (sélection d'élément et mise en écoute d'évènement)
@@ -204,7 +204,7 @@ function openEditListModal(listId) {
     // on le modifie
     editListModalElement.classList.add("is-active");
     const listIdFormInputElement =
-        editListModalElement.querySelector("[name='list_id']");
+        editListModalElement.querySelector("[name='label_id']");
     listIdFormInputElement.value = listId;
 }
 

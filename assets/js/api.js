@@ -60,7 +60,7 @@ export async function createCard(newCard){
 
 export async function updateList(listToUpdate) {
   console.log(listToUpdate);
-  const response = await fetch(`${apiBaseUrl}/lists/${listToUpdate.list_id}`, {
+  const response = await fetch(`${apiBaseUrl}/lists/${listToUpdate.label_id}`, {
     method: 'PATCH',
     body: JSON.stringify(listToUpdate),
     headers: {

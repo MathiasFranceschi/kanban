@@ -20,6 +20,6 @@ app.set('base_url', process.env.BASE_URL + ':' + app.get('port'));
 
 
 app.listen(app.get('port'), () => {
-        console.log(`Listening on ${process.env.BASE_URL
-    }:${process.env.PORT}`);
+  console.log(`Listening on ${process.env.BASE_URL
+  }:${process.env.PORT}`);
 });
