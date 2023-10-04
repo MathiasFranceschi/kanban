@@ -148,15 +148,16 @@ async function handleSubmitModifyCardName(event) {
     const labelContainerToAddElement = labelContainerElement.querySelector(
         "[slot='card-label']"
     );
-    const labelData = JSON.parse(editCardLabelFormElementoption.value);
-    labelData.card_id = cardToEdit.card_id;
-    const associateCard = await associateCardToLabel(labelData);
+    
     if (
         editCardLabelFormElementoption.value !== "Choisissez un label !" &&
         !labelContainerToAddElement.value &&
         event.submitter.value === "success"
     ) {
         if (associateCard) {
+            const labelData = JSON.parse(editCardLabelFormElementoption.value);
+    labelData.card_id = cardToEdit.card_id;
+    const associateCard = await associateCardToLabel(labelData);
             // on met à jour l'interface utilisateur avec les données retournée par l'API
             // Créer ou récupérer une fonction pour ajouter l'association sur le dom directement, finir la 'désassociation" de carte
             addAssociatedLabelToCard(labelData, associateCard);
