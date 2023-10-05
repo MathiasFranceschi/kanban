@@ -24,3 +24,26 @@ section {
 article:not(:last-child) {
   margin-bottom: 20px;
 }
+
+.label-style {
+  border-radius: 300px;
+  margin: 0.2rem;
+  max-width: fit-content;
+  
+}
+
+.card-style {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 75%;
+}
+
+.card-header {
+  flex-direction: column;
+}
+
+.card-header-icon {
+  width: 25%;
+  position: absolute;
+  right: 0px;
+}
