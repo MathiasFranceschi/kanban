@@ -220,7 +220,7 @@ async function orderLists() {
       break;
     }
 
-    position = +1;
+    position += 1;
   }
 }
 
@@ -243,7 +243,7 @@ export async function orderCards(cardContainer) {
       break;
     }
 
-    position = +1;
+    position += 1;
   }
 }
 
