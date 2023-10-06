@@ -1,7 +1,9 @@
-import { closeModals } from './utils.js';
+/* eslint-disable no-alert */
+/* eslint-disable no-use-before-define */
+import { closeModals } from './utils';
 import {
   createLabel, getLabels, updateLabel, deleteLabel,
-} from './api.js';
+} from './api';
 
 // --------------------------------------
 // Event Listening (sélection d'élément et mise en écoute d'évènement)
@@ -99,7 +101,6 @@ async function handleEditLabelFormSubmit(event) {
 
     if (editedLabel) {
       changeColorOfLabelEdited(editedLabel);
-      removeLabelFromDom(editedLabel);
       addLabelToTemplateLabelModal(editedLabel);
       editLabelFormElement.reset();
       closeModals();
@@ -148,8 +149,9 @@ function removeLabelFromDom(label) {
 function changeColorOfLabelEdited(label) {
   const labelsElement = document.querySelectorAll(`.label-${label.id}`);
   labelsElement.forEach((labelOfCard) => {
-    labelOfCard.style.backgroundColor = label.color;
-    labelOfCard.textContent = label.name;
+    const labelCard = labelOfCard;
+    labelCard.style.backgroundColor = label.color;
+    labelCard.textContent = label.name;
   });
 }
 

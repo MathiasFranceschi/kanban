@@ -1,4 +1,6 @@
-import { closeModals } from './utils.js';
+/* eslint-disable no-alert */
+/* eslint-disable no-use-before-define */
+import { closeModals } from './utils';
 import {
   createCard,
   updateCard,
@@ -6,7 +8,7 @@ import {
   associateCardToLabel,
   unassociateCardOfLabel,
   getOneCard,
-} from './api.js';
+} from './api';
 
 // --------------------------------------
 // Event Listening (sélection d'élément et mise en écoute d'évènement)
@@ -19,7 +21,6 @@ export function listenToSubmitOnAddCardForm() {
 }
 
 export function listenToClickOnAddCardButton(listId) {
-  // je récupère le bouton + de la liste,
   const addCardButtonElement = document.querySelector(
     `#list-${listId} [slot='add-card-button']`,
   );
@@ -86,7 +87,6 @@ function handleDeleteCardButtonClick(event) {
   const listIdElement = clickedButtonElement.closest('[slot=card-id]');
   const idValue = listIdElement.id;
   const cardId = Number(idValue.substring(5));
-  console.log(cardId);
   opendeleteCardModal(cardId);
 }
 

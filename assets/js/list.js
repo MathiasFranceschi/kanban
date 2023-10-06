@@ -1,9 +1,12 @@
+/* eslint-disable no-await-in-loop */
+/* eslint-disable no-alert */
+/* eslint-disable no-use-before-define */
 import Sortable from 'sortablejs';
-import { closeModals } from './utils.js';
-import { listenToClickOnAddCardButton, addCardToList } from './card.js';
+import { closeModals } from './utils';
+import { listenToClickOnAddCardButton, addCardToList } from './card';
 import {
   getLists, createList, updateList, deleteList, updateCard,
-} from './api.js';
+} from './api';
 
 // --------------------------------------
 // Event Listening (sélection d'élément et mise en écoute d'évènement)
@@ -192,7 +195,7 @@ function addListToListsContainer(list) {
     group: 'cards',
     onEnd: (event) => {
       orderCards(event.to);
-      if (event.from != event.to) {
+      if (event.from !== event.to) {
         orderCards(event.from);
       }
     },
@@ -218,7 +221,7 @@ async function orderLists() {
       break;
     }
 
-    position++;
+    position = +1;
   }
 }
 
@@ -241,7 +244,7 @@ export async function orderCards(cardContainer) {
       break;
     }
 
-    position++;
+    position = +1;
   }
 }
 

@@ -1,4 +1,4 @@
-import { apiBaseUrl } from './config.js';
+import apiBaseUrl from './config';
 
 export async function getLists() {
   const listsResponse = await fetch(`${apiBaseUrl}/lists`);
