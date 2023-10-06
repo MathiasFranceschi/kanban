@@ -172,7 +172,6 @@ function addListToListsContainer(list) {
   slotListIdElement.setAttribute('id', `list-${list.id}`);
   const listsContainerElement = document.querySelector('#lists-container');
   const listTextName = clonedListTemplate.querySelector("[slot='list-name']");
-
   const listDeleteButton = clonedListTemplate.querySelector(
     "[slot='remove-list-button']",
   );

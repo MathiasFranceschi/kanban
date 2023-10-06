@@ -1,11 +1,9 @@
+/* eslint-disable no-use-before-define */
 // --------------------------------------
 // Event Listening (sélection d'élément et mise en écoute d'évènement)
 // --------------------------------------
 export function listenToClickOnModalClosingElements() {
-  // récupérer les boutons concernés
   const closeElementList = document.querySelectorAll('.modal .close, .modal .modal-background');
-
-  // associer un écouteur d'évènement
   closeElementList.forEach((closeElement) => {
     closeElement.addEventListener('click', handleCloseModalClick);
   });

@@ -7,7 +7,6 @@ const router = require('./app/router');
 
 app.use(cors('*'));
 app.use(express.static('dist'));
-// pour réagir aux formulaires, on rajoute ce middleware
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
